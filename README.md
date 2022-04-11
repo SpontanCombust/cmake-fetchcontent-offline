@@ -16,7 +16,7 @@ This module ensures that when you're online dependency checking and populating p
 #add the module to the module path
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/modules") 
 # include the module
-include(fetch-content-offline) 
+include(fetchcontent-offline) 
 ```
 3. Call FetchContent_DisconnectedIfOffline()
 ```cmake
@@ -43,7 +43,7 @@ FetchContent_MakeAvailable(FetchContentOffline)
 
 # make the module discoverble, use dependency's cached path
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${fetchcontentoffline_SOURCE_DIR}")
-include(fetch-content-offline)
+include(fetchcontent-offline)
 
 FetchContent_DisconnectedIfOffline()
 ```
